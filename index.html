@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#090909">
+        <title>GG GAMES — Game Hub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <a class="brand" href="#inicio">GG <span>GAMES</span></a>
+                <nav>
+                    <a href="#jogos">Jogos</a>
+                    <a href="#lojas">Lojas</a>
+                    <a href="#favoritos">Favoritos</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#noticias">Notícias</a>
+                    <a href="#comunidade">Comunidade</a>
+                </nav>
+                <div class="count" id="headerCount">120 jogos · 120 lojas</div>
+            </div>
+        </header>
+        <main id="inicio">
+            <section class="hero">
+                <div>
+                    <div class="eyebrow">Seu próximo jogo começa aqui</div>
+                    <h1>GG <span>GAMES</span></h1>
+                    <p>Explore jogos, encontre lojas e acesse páginas oficiais em um só lugar. Pesquise por nome ou gênero, filtre os resultados e salve seus favoritos.</p>
+                    <a class="action primary" href="#jogos" style="display:inline-block;text-decoration:none;margin-top:8px">EXPLORAR JOGOS ↓</a>
+                </div>
+                <div class="hero-art">
+                    <div class="pixels">🎮 ⚡ 🕹️</div>
+                    <strong>PLAY. DISCOVER.<br><span style="color:#ff454b">REPEAT.</span></strong>
+                    <p style="margin-bottom:0">120 jogos • 120 lojas • um só hub</p>
+                </div>
+            </section>
+            <div class="toolbar">
+                <input id="search" class="search" type="search" placeholder="Pesquisar jogos, lojas ou gêneros..." aria-label="Pesquisar">
+                <select id="genre" class="select">
+                    <option value="">Todos os gêneros</option>
+                </select>
+                <select id="sort" class="select">
+                    <option value="az">Nome: A–Z</option>
+                    <option value="za">Nome: Z–A</option>
+                    <option value="genre">Gênero</option>
+                </select>
+                <button class="action" id="reset">Limpar filtros</button>
+            </div>
+            <section class="section" id="jogos">
+                <div class="section-head">
+                    <div><h2>🎮 Catálogo de jogos</h2>
+                        <p id="gameSummary">120 jogos disponíveis</p>
+                    </div>
+                    <span class="tiny">Capas carregadas de fontes externas quando disponíveis</span>
+                </div>
+                <div id="gamesGrid" class="grid">
+                </div>
+                <div id="gamesEmpty" class="empty">Nenhum jogo encontrado. Tente outro nome ou gênero.</div>
+                <div id="gamesPages" class="pagination"></div></section><section class="section" id="lojas">
+                    <div class="section-head">
+                    <div>
+                        <h2>🛍️ Lojas e plataformas</h2>
+                        <p id="shopSummary">120 lojas e plataformas de jogos</p>
+                    </div></div><div id="shopsGrid" class="grid"></div>
+                    <div id="shopsEmpty" class="empty">Nenhuma loja encontrada.</div>
+                    <div id="shopsPages" class="pagination"></div>
+                </section>
+                <section class="section" id="favoritos">
+                    <div class="section-head">
+                    <div>
+                        <h2>❤️ Seus favoritos</h2>
+                        <p>Favoritos salvos neste navegador.</p>
+                    </div>
+                    <button class="action" id="showAll">Ver todos os jogos</button>
+                </div>
+                <div id="favoritesGrid" class="grid"></div>
+                <div id="favoritesEmpty" class="empty">Você ainda não salvou jogos. Clique em ♡ em qualquer jogo para adicioná-lo.</div>
+            </section>
+            <section class="section" id="ofertas">
+                <div class="section-head">
+                    <div><h2>🔥 Principais ofertas</h2><p>Atalhos para conferir promoções nas lojas oficiais. Preços e descontos podem mudar.</p></div>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card offer-card"><div class="feature-icon">🎮</div><span class="feature-tag">Promoções</span><h3>Steam — Ofertas especiais</h3><p>Confira jogos em promoção, descontos por tempo limitado e eventos sazonais.</p><a class="action primary" href="https://store.steampowered.com/specials/" target="_blank" rel="noopener noreferrer">Ver ofertas ↗</a></article>
+                    <article class="feature-card offer-card"><div class="feature-icon">🕹️</div><span class="feature-tag">Jogos grátis e descontos</span><h3>Epic Games Store</h3><p>Veja os jogos gratuitos da semana e as ofertas disponíveis na loja.</p><a class="action primary" href="https://store.epicgames.com/pt-BR/sales-and-specials" target="_blank" rel="noopener noreferrer">Ver ofertas ↗</a></article>
+                    <article class="feature-card offer-card"><div class="feature-icon">💎</div><span class="feature-tag">Promoções</span><h3>GOG — Deals</h3><p>Explore descontos em jogos para PC e títulos clássicos sem DRM.</p><a class="action primary" href="https://www.gog.com/en/games?discounted=true" target="_blank" rel="noopener noreferrer">Ver ofertas ↗</a></article>
+                </div>
+            </section>
+            <section class="section" id="noticias">
+                <div class="section-head"><div><h2>📰 Notícias do mundo gamer</h2><p>Fontes para acompanhar lançamentos, atualizações e novidades.</p></div></div>
+                <div class="feature-grid news-grid">
+                    <article class="feature-card news-card"><div class="news-symbol">🚀</div><span class="feature-tag">Lançamentos</span><h3>Novos jogos chegando</h3><p>Acompanhe anúncios, datas de lançamento e novidades diretamente nos canais oficiais.</p><a class="text-link" href="https://store.steampowered.com/news/" target="_blank" rel="noopener noreferrer">Ler notícias da Steam ↗</a></article>
+                    <article class="feature-card news-card"><div class="news-symbol">⚡</div><span class="feature-tag">Atualizações</span><h3>Atualizações e eventos</h3><p>Fique por dentro de atualizações, temporadas, eventos e notas de patch.</p><a class="text-link" href="https://www.epicgames.com/site/pt-BR/news" target="_blank" rel="noopener noreferrer">Ler notícias da Epic ↗</a></article>
+                    <article class="feature-card news-card"><div class="news-symbol">🏆</div><span class="feature-tag">Comunidade gamer</span><h3>Notícias e cultura gamer</h3><p>Veja reportagens, análises e cobertura sobre o universo dos videogames.</p><a class="text-link" href="https://www.adrenaline.com.br/games/" target="_blank" rel="noopener noreferrer">Acessar Adrenaline ↗</a></article>
+                </div>
+            </section>
+            <section class="section" id="comunidade">
+                <div class="section-head"><div><h2>👥 Comunidade GG GAMES</h2><p>Compartilhe sua opinião, recomende um jogo e converse com outros jogadores neste navegador.</p></div></div>
+                <div class="community-panel">
+                    <form id="communityForm" class="community-form">
+                        <label for="communityName">Seu apelido</label><input id="communityName" class="community-input" maxlength="24" placeholder="Ex.: Player123" required>
+                        <label for="communityMessage">Sua mensagem</label><textarea id="communityMessage" class="community-input" maxlength="300" rows="3" placeholder="Qual jogo você está jogando? Compartilhe com a comunidade..." required></textarea>
+                        <button class="action primary" type="submit">Publicar mensagem</button>
+                        <p class="community-note">As mensagens ficam salvas somente neste navegador. Não é um chat online entre diferentes usuários.</p>
+                    </form>
+                    <div class="community-feed"><div class="feed-heading"><h3>💬 Mural da comunidade</h3><button class="action" id="clearCommunity" type="button">Limpar mural</button></div><div id="communityPosts" class="community-posts"><p class="empty-community">Ainda não há mensagens. Seja o primeiro a participar!</p></div></div>
+                </div>
+            </section>
+        </main>
+        <footer> GG GAMES ©<span id="year">
+        </span> · Hub independente de descoberta de jogos. Marcas e jogos pertencem aos seus respectivos proprietários.</footer>
+        <div id="toast" class="toast" role="status"></div>
+        <script src="script.js" defer></script>
+    </body>
+    </html>
